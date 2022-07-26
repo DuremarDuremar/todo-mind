@@ -51,11 +51,15 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   background-color: #f5f5f5;
-  font-family: "Be Vietnam Pro", sans-serif;
+
+  width: 70vw;
+  height: 90%;
 
   h1 {
     color: #e9d9d8;
+    font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
-    font-size: 170px;
+    font-size: 12vw;
+    text-align: center;
   }
 `;
