@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface todoItem {
+export interface todoItem {
   id: string;
   text: string;
   completed: boolean;
@@ -25,7 +25,9 @@ export const todoSlice = createSlice({
         completed: false,
       });
     },
-    clearTodo(state) {},
+    clearTodo(state) {
+      state.todos = state.todos.filter((todo) => todo.completed === false);
+    },
     toggleTodo(state, action: PayloadAction<string>) {
       state.todos.map(
         (todo) =>

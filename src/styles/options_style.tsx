@@ -21,6 +21,11 @@ export const Content = styled.div`
     :last-child {
       justify-content: flex-end;
       padding-right: 1.2vw;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+      :hover {
+        color: #e9d9d8;
+      }
     }
   }
 `;
@@ -32,4 +37,5 @@ export const Item = styled.p<{
     props.active ? "1px solid #e9d9d8" : "1px solid transparent"};
   padding: 6px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 `;

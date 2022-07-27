@@ -2,6 +2,7 @@ import React, { FC } from "react";
 
 import { Content, Item } from "../styles/options_style";
 import { useTypeSelector, useTypeDispatch } from "../hooks/redux_hook";
+import { clearTodo } from "../store/reducer";
 
 interface IProps {
   view: string;
@@ -28,7 +29,13 @@ const Options: FC<IProps> = ({ view, setView }) => {
         {todos.filter((item) => item.completed === false).length} items left
       </div>
       <div>{buttons}</div>
-      <div>Clear Completed</div>
+      <div
+        onClick={() => {
+          dispatch(clearTodo());
+        }}
+      >
+        Clear Completed
+      </div>
     </Content>
   );
 };
