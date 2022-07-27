@@ -26,7 +26,12 @@ export const todoSlice = createSlice({
       });
     },
     removeTodo(state) {},
-    toggleTodo(state, action: PayloadAction<string>) {},
+    toggleTodo(state, action: PayloadAction<string>) {
+      state.todos.map(
+        (todo) =>
+          todo.id === action.payload && (todo.completed = !todo.completed)
+      );
+    },
   },
 });
 
