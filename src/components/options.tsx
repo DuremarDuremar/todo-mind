@@ -1,20 +1,33 @@
 import React, { FC } from "react";
 
-import { Content } from "../styles/options_style";
+import { Content, Item } from "../styles/options_style";
+import { useTypeSelector, useTypeDispatch } from "../hooks/redux_hook";
 
 interface IProps {
   view: string;
+  setView: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Options: FC<IProps> = ({ view }) => {
+const Options: FC<IProps> = ({ view, setView }) => {
+  const todos = useTypeSelector((state) => state.todos);
+  const dispatch = useTypeDispatch();
+
+  const buttons = ["All", "Active", "Completed"].map((item) => (
+    <Item
+      key={item}
+      active={item === view ? true : false}
+      onClick={() => setView(item)}
+    >
+      {item}
+    </Item>
+  ));
+
   return (
     <Content>
-      <div>items left</div>
       <div>
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        {todos.filter((item) => item.completed === false).length} items left
       </div>
+      <div>{buttons}</div>
       <div>Clear Completed</div>
     </Content>
   );

@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { useTypeSelector, useTypeDispatch } from "../hooks/redux_hook";
 import { toggleTodo } from "../store/reducer";
-import { Content } from "../styles/list_style";
+import { Content, Item } from "../styles/list_style";
 
 interface IProps {
   view: string;
@@ -16,12 +16,12 @@ const List: FC<IProps> = ({ view }) => {
     <Content>
       {todos.length
         ? todos.map((item) => (
-            <div key={item.id}>
+            <Item key={item.id} completed={item.completed}>
               <button onClick={() => dispatch(toggleTodo(item.id))}>
-                <i className="fas fa-check fa-2x"></i>
+                {item.completed && <i className="fas fa-check fa-2x"></i>}
               </button>
               <span>{item.text}</span>
-            </div>
+            </Item>
           ))
         : null}
     </Content>

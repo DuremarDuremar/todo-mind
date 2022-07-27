@@ -24,3 +24,12 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const Item = styled.p<{
+  active: boolean;
+}>`
+  border: ${(props) =>
+    props.active ? "1px solid #e9d9d8" : "1px solid transparent"};
+  padding: 6px;
+  cursor: pointer;
+`;

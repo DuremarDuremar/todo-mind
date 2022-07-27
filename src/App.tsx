@@ -16,7 +16,7 @@ const App: FC = () => {
           <h1>todos</h1>
           <Form />
           <List view={view} />
-          <Options view={view} />
+          <Options view={view} setView={setView} />
         </Content>
       </Wrapper>
     </>

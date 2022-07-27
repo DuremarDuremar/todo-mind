@@ -25,7 +25,7 @@ export const todoSlice = createSlice({
         completed: false,
       });
     },
-    removeTodo(state) {},
+    clearTodo(state) {},
     toggleTodo(state, action: PayloadAction<string>) {
       state.todos.map(
         (todo) =>
@@ -35,6 +35,6 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, toggleTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, toggleTodo, clearTodo } = todoSlice.actions;
 
 export const todoReducer = todoSlice.reducer;
