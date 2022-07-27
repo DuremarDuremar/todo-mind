@@ -20,12 +20,15 @@ const Form = () => {
 
   return (
     <Content>
-      <i className="fas fa-chevron-down fa-lg" onClick={handleAction}></i>
+      <div>
+        <i className="fas fa-chevron-down fa-lg" onClick={handleAction}></i>
+      </div>
       <Add>
         <input
           placeholder="What needs to be done?"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleAction()}
         />
       </Add>
     </Content>
