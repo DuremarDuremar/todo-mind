@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTypeDispatch, useTypeSelector } from "../hooks/redux_hook";
+import { useTypeDispatch } from "../hooks/redux_hook";
 import { addTodo } from "../store/reducer";
 
 import { Content, Add } from "../styles/form_style";
@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <Content>
-      <i className="fas fa-chevron-down fa-2x" onClick={handleAction}></i>
+      <i className="fas fa-chevron-down fa-lg" onClick={handleAction}></i>
       <Add>
         <input
           placeholder="What needs to be done?"

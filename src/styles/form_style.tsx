@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   background-color: #fff;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0 1.5vw;
   display: flex;
   align-items: center;
   i {
-    color: #f0f1f3;
+    color: #dadce0;
     padding-left: 15px;
     cursor: pointer;
     :hover {
@@ -25,7 +25,7 @@ export const Add = styled.label`
     font-size: 2rem;
     color: gray;
     ::placeholder {
-      color: #f0f1f3;
+      color: #dadce0;
       font-style: italic;
     }
   }
