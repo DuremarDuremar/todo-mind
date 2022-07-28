@@ -14,6 +14,7 @@ export const Item = styled.div<{
   height: calc(2vw + 32px);
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &:first-child {
     box-shadow: none;

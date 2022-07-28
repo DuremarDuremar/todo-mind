@@ -6,7 +6,7 @@ export interface todoItem {
   completed: boolean;
 }
 
-interface State {
+export interface State {
   todos: todoItem[];
 }
 

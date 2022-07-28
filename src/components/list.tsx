@@ -31,8 +31,12 @@ const List: FC<IProps> = ({ view }) => {
     <Content>
       {items.length
         ? items.map((item) => (
-            <Item key={item.id} completed={item.completed}>
-              <button onClick={() => dispatch(toggleTodo(item.id))}>
+            <Item
+              key={item.id}
+              completed={item.completed}
+              onClick={() => dispatch(toggleTodo(item.id))}
+            >
+              <button>
                 {item.completed && <i className="fas fa-check fa-2x"></i>}
               </button>
               <span>{item.text}</span>

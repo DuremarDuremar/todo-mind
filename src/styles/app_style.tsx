@@ -55,6 +55,9 @@ export const Content = styled.div`
   width: 100%;
   max-width: 700px;
   height: 90%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #f5f5f5,
+    0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #f5f5f5,
+    0 20px 1px -9px rgba(0, 0, 0, 0.15);
 
   h1 {
     color: #e9d9d8;
