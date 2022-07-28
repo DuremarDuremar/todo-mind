@@ -33,6 +33,7 @@ const Options: FC<IProps> = ({ view, setView }) => {
         onClick={() => {
           dispatch(clearTodo());
         }}
+        role="button"
       >
         Clear Completed
       </div>

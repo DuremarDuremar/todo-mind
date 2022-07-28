@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { useTypeDispatch } from "../hooks/redux_hook";
 import { addTodo } from "../store/reducer";
 
 import { Content, Add } from "../styles/form_style";
 
-const Form = () => {
+const Form: FC = () => {
   const dispatch = useTypeDispatch();
 
   const [text, setText] = useState("");
@@ -21,7 +21,11 @@ const Form = () => {
   return (
     <Content>
       <div>
-        <i className="fas fa-chevron-down fa-lg" onClick={handleAction}></i>
+        <i
+          className="fas fa-chevron-down fa-lg"
+          onClick={handleAction}
+          role="button"
+        ></i>
       </div>
       <Add>
         <input
@@ -29,6 +33,7 @@ const Form = () => {
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleAction()}
+          aria-label="input"
         />
       </Add>
     </Content>
