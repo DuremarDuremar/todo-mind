@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/todo-mind/static/js/main.fe999d7a.js",
+    "index.html": "/todo-mind/index.html",
+    "main.fe999d7a.js.map": "/todo-mind/static/js/main.fe999d7a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fe999d7a.js"
+  ]
+}
