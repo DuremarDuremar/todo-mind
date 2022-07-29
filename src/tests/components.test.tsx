@@ -7,13 +7,6 @@ import Options from "../components/options";
 
 jest.mock("react-redux");
 
-// const renderWithRedux = (component: any, {} = {}) => {
-//   return {
-//     ...render(<Provider store={setupStore()}>{component}</Provider>),
-//     setupStore,
-//   };
-// };
-
 const mokedSelector = jest.spyOn(reduxHooks, "useSelector");
 const mokedDispatch = jest.spyOn(reduxHooks, "useDispatch");
 const mockedToggleTodo = jest.spyOn(actions, "toggleTodo");
